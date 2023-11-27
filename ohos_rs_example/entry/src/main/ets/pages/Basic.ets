@@ -31,6 +31,10 @@ struct Basic {
           const r = basic.bigintAdd(BigInt(100), BigInt(200));
           log.info(String(r));
         })
+        Button("Get Object").onClick(() => {
+          const o = basic.getObject();
+          log.info(String(o.test));
+        })
       }
       .width('100%')
     }

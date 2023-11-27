@@ -16,6 +16,11 @@ struct Index {
             url: 'pages/Basic'
           })
         })
+        Button('Array').onClick(() => {
+          router.pushUrl({
+            url: 'pages/Array'
+          })
+        })
       }
       .width('100%')
     }
