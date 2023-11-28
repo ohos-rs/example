@@ -21,6 +21,11 @@ struct Index {
             url: 'pages/Array'
           })
         })
+        Button("ArrayBuffer").onClick(() => {
+          router.pushUrl({
+            url: 'pages/ArrayBuffer'
+          })
+        })
       }
       .width('100%')
     }

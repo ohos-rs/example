@@ -3,6 +3,7 @@
     "pages/Index",
     "pages/Hello",
     "pages/Basic",
-    "pages/Array"
+    "pages/Array",
+    "pages/ArrayBuffer"
   ]
 }
