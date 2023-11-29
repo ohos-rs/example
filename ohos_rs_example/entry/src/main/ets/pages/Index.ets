@@ -26,6 +26,11 @@ struct Index {
             url: 'pages/ArrayBuffer'
           })
         })
+        Button("Tokio").onClick(() => {
+          router.pushUrl({
+            url: 'pages/TokioRT'
+          })
+        })
       }
       .width('100%')
     }

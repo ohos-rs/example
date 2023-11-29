@@ -4,6 +4,7 @@
     "pages/Hello",
     "pages/Basic",
     "pages/Array",
-    "pages/ArrayBuffer"
+    "pages/ArrayBuffer",
+    "pages/TokioRT"
   ]
 }
