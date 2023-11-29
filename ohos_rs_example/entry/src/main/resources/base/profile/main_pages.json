@@ -5,6 +5,7 @@
     "pages/Basic",
     "pages/Array",
     "pages/ArrayBuffer",
-    "pages/TokioRT"
+    "pages/TokioRT",
+    "pages/Either"
   ]
 }

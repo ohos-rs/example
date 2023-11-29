@@ -31,6 +31,11 @@ struct Index {
             url: 'pages/TokioRT'
           })
         })
+        Button("Either").onClick(() => {
+          router.pushUrl({
+            url: 'pages/Either'
+          })
+        })
       }
       .width('100%')
     }

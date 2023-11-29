@@ -1,7 +1,6 @@
 import common from '@ohos.app.ability.common';
 import fs from '@ohos.file.fs';
 import tokioRT from 'libtokio_rt.so';
-import buffer from '@ohos.buffer';
 import log from '../utils/log';
 
 let context = getContext(this) as common.UIAbilityContext;
