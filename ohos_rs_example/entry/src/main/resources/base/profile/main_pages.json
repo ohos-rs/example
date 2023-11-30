@@ -6,6 +6,7 @@
     "pages/Array",
     "pages/ArrayBuffer",
     "pages/TokioRT",
-    "pages/Either"
+    "pages/Either",
+    "pages/External"
   ]
 }

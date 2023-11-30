@@ -36,6 +36,11 @@ struct Index {
             url: 'pages/Either'
           })
         })
+        Button("External").onClick(() => {
+          router.pushUrl({
+            url: 'pages/External'
+          })
+        })
       }
       .width('100%')
     }
