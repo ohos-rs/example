@@ -41,6 +41,11 @@ struct Index {
             url: 'pages/External'
           })
         })
+        Button('TSFN').onClick(() => {
+          router.pushUrl({
+            url: 'pages/Tsfn'
+          })
+        })
       }
       .width('100%')
     }
