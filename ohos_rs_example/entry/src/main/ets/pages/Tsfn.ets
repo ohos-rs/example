@@ -11,10 +11,10 @@ struct Tsfn {
         Text(this.message)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
-        
+
         Button('Run TSFN').onClick(() => {
-          tsfn.testTsFn((args: number[]) => {
-            this.message = args.toString();
+          tsfn.testTsFn((...args: number[]) => {
+            this.message = `${args}`;
           })
         })
       }
