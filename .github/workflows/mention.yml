@@ -14,3 +14,4 @@ jobs:
         issue-number: ${{ github.event.issue.number }}
         body: |
           @southorange0929 Please check this issue, thanks.
+        token: ${{ secrets.TOKEN }}
