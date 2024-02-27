@@ -1,0 +1,17 @@
+name: Auto Mention on Issue
+
+on:
+  issues:
+    types: [opened, reopened]
+
+jobs:
+  mention:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Mention User
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        body: |
+          @southorange0929 Please check this issue, thanks.
+        token: ${{ secrets.GITHUB_TOKEN }}
