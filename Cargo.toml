@@ -1,0 +1,9 @@
+[workspace]
+resolver = "2"
+members = ["example/*"]
+
+
+[workspace.dependencies]
+napi-ohos        = { version = "*" }
+napi-derive-ohos = { version = "*" }
+napi-build-ohos = { version = "*" }

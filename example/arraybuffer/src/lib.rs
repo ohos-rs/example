@@ -1,6 +1,5 @@
 use napi_derive_ohos::{js_function, module_exports};
-use napi_ohos::bindgen_prelude::pre_init;
-use napi_ohos::{module_init, JsObject};
+use napi_ohos::JsObject;
 use std::f64::consts::PI;
 
 use napi_ohos::{
@@ -71,9 +70,4 @@ pub fn register_js(mut exports: JsObject) -> Result<()> {
     exports.create_named_method("mutateFloat64Array", mutate_float64_array)?;
     exports.create_named_method("mutateI64Array", mutate_i64_array)?;
     Ok(())
-}
-
-#[module_init]
-fn init() {
-    pre_init();
 }

@@ -1,6 +1,6 @@
 use napi_derive_ohos::napi;
-use napi_ohos::bindgen_prelude::{pre_init, BigInt, Buffer, Null, Object, Undefined};
-use napi_ohos::{module_init, Env};
+use napi_ohos::bindgen_prelude::{BigInt, Buffer, Null, Object, Undefined};
+use napi_ohos::Env;
 
 #[napi]
 pub fn get_bool() -> bool {
@@ -42,9 +42,4 @@ pub fn get_array_buffer() -> Buffer {
 #[napi]
 pub fn bigint_add(a: BigInt, b: BigInt) -> u128 {
     a.get_u128().1 + b.get_u128().1
-}
-
-#[module_init]
-fn init() {
-    pre_init();
 }

@@ -1,8 +1,4 @@
 use napi_derive_ohos::{js_function, module_exports};
-use napi_ohos::bindgen_prelude::pre_init;
-use napi_ohos::module_init;
-
-use std::convert::TryInto;
 
 use napi_ohos::{CallContext, JsFunction, JsNumber, JsObject, JsTimeout, JsUndefined, Result};
 
@@ -26,9 +22,4 @@ pub fn register_js(mut exports: JsObject) -> Result<()> {
     exports.create_named_method("setTimeout", set_timeout)?;
     exports.create_named_method("clearTimeout", clear_timeout)?;
     Ok(())
-}
-
-#[module_init]
-fn init() {
-    pre_init();
 }

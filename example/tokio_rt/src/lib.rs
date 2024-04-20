@@ -1,7 +1,6 @@
-use napi_derive_ohos::{js_function, module_exports};
-use napi_ohos::bindgen_prelude::pre_init;
-use napi_ohos::{module_init, CallContext, Error, JsObject, JsString, Result, Status};
 use futures::prelude::*;
+use napi_derive_ohos::{js_function, module_exports};
+use napi_ohos::{CallContext, Error, JsObject, JsString, Result, Status};
 
 #[js_function(1)]
 pub fn execute_tokio_readfile(ctx: CallContext) -> Result<JsObject> {
@@ -37,15 +36,9 @@ pub fn error_from_tokio_future(ctx: CallContext) -> Result<JsObject> {
     )
 }
 
-
 #[module_exports]
 pub fn register_js(mut exports: JsObject) -> Result<()> {
     exports.create_named_method("executeTokioReadFile", execute_tokio_readfile)?;
     exports.create_named_method("executeTokioReadFileFailed", error_from_tokio_future)?;
     Ok(())
-}
-
-#[module_init]
-fn init() {
-    pre_init();
 }

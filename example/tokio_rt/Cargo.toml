@@ -9,10 +9,10 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-napi-ohos        = { version = "0.0.3", features = ["tokio_rt","ohos"] }
-napi-derive-ohos = { version = "0.0.1" }
+napi-ohos        = { workspace = true, features = ["tokio_rt","ohos"] }
+napi-derive-ohos = { workspace = true }
 tokio = { version = "1", features = ["default", "fs"] }
 futures = "0.3"
 
 [build-dependencies]
-napi-build-ohos = { version = "0.0.1" }
+napi-build-ohos = { workspace = true }

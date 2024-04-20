@@ -1,7 +1,5 @@
-use std::convert::TryInto;
 use napi_derive_ohos::{js_function, module_exports};
-use napi_ohos::bindgen_prelude::pre_init;
-use napi_ohos::{CallContext, JsExternal, JsNumber, JsObject, module_init, Result};
+use napi_ohos::{CallContext, JsExternal, JsNumber, JsObject, Result};
 
 struct NativeObject {
     count: i32,
@@ -34,9 +32,4 @@ pub fn register_js(mut exports: JsObject) -> Result<()> {
     exports.create_named_method("createExternalWithHint", create_external_with_hint)?;
     exports.create_named_method("getExternalCount", get_external_count)?;
     Ok(())
-}
-
-#[module_init]
-fn init() {
-    pre_init();
 }

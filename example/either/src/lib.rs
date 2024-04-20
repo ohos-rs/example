@@ -1,8 +1,5 @@
 use napi_derive_ohos::{js_function, module_exports};
-use napi_ohos::bindgen_prelude::pre_init;
-use napi_ohos::{module_init, JsObject};
-
-use std::convert::TryInto;
+use napi_ohos::JsObject;
 
 use napi_ohos::{CallContext, Either, JsNumber, JsString, Result};
 
@@ -37,9 +34,4 @@ pub fn register_js(mut exports: JsObject) -> Result<()> {
     exports.create_named_method("eitherNumberString", either_number_string)?;
     exports.create_named_method("dynamicArgumentLength", dynamic_argument_length)?;
     Ok(())
-}
-
-#[module_init]
-fn init() {
-    pre_init();
 }

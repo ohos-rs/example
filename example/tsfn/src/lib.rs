@@ -1,9 +1,7 @@
 use std::thread;
 
 use napi_derive_ohos::{js_function, module_exports};
-use napi_ohos::bindgen_prelude::pre_init;
 use napi_ohos::{
-    module_init,
     threadsafe_function::{ThreadSafeCallContext, ThreadsafeFunctionCallMode},
     CallContext, JsFunction, JsNumber, JsObject, JsUndefined, Result,
 };
@@ -42,9 +40,4 @@ pub fn test_threadsafe_function(ctx: CallContext) -> Result<JsUndefined> {
 pub fn register_js(mut exports: JsObject) -> Result<()> {
     exports.create_named_method("testTsFn", test_threadsafe_function)?;
     Ok(())
-}
-
-#[module_init]
-fn init() {
-    pre_init();
 }
