@@ -1,7 +1,6 @@
 use napi_derive_ohos::{contextless_function, js_function, module_exports};
 use napi_ohos::{
-    module_init, CallContext, ContextlessResult, Env, JsBoolean, JsNumber, JsObject, JsUndefined,
-    JsUnknown, Result,
+    CallContext, ContextlessResult, Env, JsBoolean, JsNumber, JsObject, JsUnknown, Result,
 };
 
 #[contextless_function]
