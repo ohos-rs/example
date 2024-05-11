@@ -1,0 +1,20 @@
+[package]
+name    = "rusqlite"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi-ohos        = { version = "*",features = ["error_anyhow"] }
+napi-derive-ohos = { version = "*" }
+rusqlite = { version = "0.31", features = ["bundled"] }
+
+[build-dependencies]
+napi-build-ohos = { version = "*" }
+
+[profile.release]
+lto = true
