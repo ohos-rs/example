@@ -11,7 +11,7 @@ crate-type = ["cdylib"]
 [dependencies]
 napi-ohos        = { version = "*",features = ["error_anyhow"] }
 napi-derive-ohos = { version = "*" }
-rusqlite = { version = "0.31", features = ["bundled"] }
+rusqlite = { version = "0.31", features = ["bundled","bundled-sqlcipher-vendored-openssl"] }
 
 [build-dependencies]
 napi-build-ohos = { version = "*" }
