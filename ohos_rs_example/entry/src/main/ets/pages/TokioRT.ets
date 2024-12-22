@@ -14,7 +14,7 @@ struct TokioRT {
     let file = fs.openSync(filesDir + '/test.txt', fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
     // 写入一段内容至文件
     fs.writeSync(file.fd, "Try to write str.");
-    const result: [] = await tokioRT.executeTokioReadFile(filesDir + '/test.txt');
+    const result = await tokioRT.executeTokioReadFile(filesDir + '/test.txt');
     log.info(`Read file result: ${result.toString()}`)
   }
 

@@ -10,7 +10,7 @@ struct ArrayBuffer {
       Column({ space: 20 }) {
         Button("getBufferLength").onClick(() => {
           const fixture = buffer.from('wow, hello');
-          const length : number= nativeArrayBuffer.getArraybufferLength(fixture.buffer);
+          const length = nativeArrayBuffer.getArraybufferLength(fixture.buffer);
           log.info("getBufferLength",String(length), String(fixture.buffer.byteLength));
         })
         Button("mutateUint8Array").onClick(() => {
