@@ -1,5 +1,5 @@
 [package]
-name    = "tokio_rt"
+name = "tokio_rt"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,7 +9,7 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-napi-ohos        = { workspace = true, features = ["tokio_rt","ohos"] }
+napi-ohos = { workspace = true }
 napi-derive-ohos = { workspace = true }
 tokio = { version = "1", features = ["default", "fs"] }
 futures = "0.3"

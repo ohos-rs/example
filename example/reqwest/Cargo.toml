@@ -1,5 +1,5 @@
 [package]
-name    = "reqwest"
+name = "reqwest"
 version = "0.1.0"
 edition = "2021"
 
@@ -9,15 +9,12 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-napi-ohos        = { version = "1.0.0-beta.1",features=["error_anyhow"] }
-napi-derive-ohos = { version = "1.0.0-beta.1" }
-reqwest = { version = "0.11", features = [
-    "blocking",
-    "json"
-]}
+napi-ohos = { workspace = true, features = ["error_anyhow"] }
+napi-derive-ohos = { workspace = true }
+reqwest = { version = "=0.13.2", features = ["blocking", "json"] }
 
 [build-dependencies]
-napi-build-ohos = { version = "1.0.0-beta.1" }
+napi-build-ohos = { workspace = true }
 
 [profile.release]
 lto = true
