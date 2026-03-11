@@ -27,7 +27,7 @@ struct TokioRT {
       await tokioRT.executeTokioReadFileFailed(filesDir + '/test.txt');
       throw new Error("Unreachable")
     } catch (e) {
-      log.info(e.message);
+      log.error(e.message);
     }
   }
 
@@ -36,8 +36,9 @@ struct TokioRT {
     let file = fs.openSync(filesDir + '/test.txt', fs.OpenMode.READ_WRITE | fs.OpenMode.CREATE);
     // 写入一段内容至文件
     fs.writeSync(file.fd, "Try to write str.");
+
     const buffers = await Promise.all(
-      Array.from({ length: 50 }).map((_) => tokioRT.executeTokioReadFile(filesDir + '/test.txt'))
+      Array.from<number>({ length: 50 }).map(() => tokioRT.executeTokioReadFile(filesDir + '/test.txt'))
     );
     for (const fileContent of buffers) {
       log.info(`${fileContent.toString()}`)

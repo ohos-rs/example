@@ -33,7 +33,7 @@ struct Basic {
         })
         Button("Get Object").onClick(() => {
           const o = basic.getObject();
-          log.info(String(o.test));
+          log.info(JSON.stringify(o));
         })
       }
       .width('100%')

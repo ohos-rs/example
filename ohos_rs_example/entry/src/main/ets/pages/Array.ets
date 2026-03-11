@@ -13,10 +13,11 @@ struct Array {
         })
         Button("createArrayWithLength").onClick(() => {
           const a = nativeArray.createArrayWithLength(10);
-          log.info("createArrayWithLength array", String(a.length === 10 && typeof a === "object"));
+          const l: number = a.length;
+          log.info("createArrayWithLength array", String(l === 10 && typeof a === "object"));
         })
         Button("setElement").onClick(() => {
-          const a = nativeArray.setElement([1, 3, 4], 2, 2);
+          const a  = nativeArray.setElement([1, 3, 4], 2, 2);
           log.info("setElement array", String(a.join("")));
         })
         Button("hasElement").onClick(() => {

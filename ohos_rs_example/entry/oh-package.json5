@@ -6,5 +6,13 @@
   "author": "",
   "license": "",
   "dependencies": {
+    'libarraybuffer.so': 'file:./src/main/cpp/types/libarraybuffer',
+    'libarray.so': 'file:./src/main/cpp/types/libarray',
+    'libbasic.so': 'file:./src/main/cpp/types/libbasic',
+    'libeither.so': 'file:./src/main/cpp/types/libeither',
+    'libexternal.so': 'file:./src/main/cpp/types/libexternal',
+    'libhello.so': 'file:./src/main/cpp/types/libhello',
+    'libtsfn.so': 'file:./src/main/cpp/types/libtsfn',
+    'libtokio_rt.so': 'file:./src/main/cpp/types/libtokio_rt',
   }
 }
